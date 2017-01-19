@@ -9,7 +9,7 @@ module OptaSD
 
     # Load OPTA SD API Configurations from './config/opta_sd_api.yml'
     def get_configuration
-      config      = YAML::load(File.open('./config/opta_sd_api.yml'))
+      config      = YAML::load(File.open('./config/opta_sd.yml'))
       @domain     = config['opta_domain']
       @auth_token = config['opta_auth_token']
       @params     = Hash.new
@@ -32,7 +32,7 @@ module OptaSD
     end
 
     def build_uri
-      puts "#{build_url}?#{build_params}"
+      # puts "#{build_url}?#{build_params}"
       URI.parse([build_url, build_params].join('?'))
     end
 

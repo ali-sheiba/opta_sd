@@ -3,7 +3,6 @@ module OptaSD
     class Match < OptaSD::Soccer::SoccerCore
 
       attr_accessor :params
-      # attr_reader   :resource
 
       def initialize
         super
