@@ -25,6 +25,8 @@ describe OptaSD do
   it "raise exceptions" do
     expect{
       match = OptaSD::Soccer::Match.new.resource(@invalid_match_id).get
-    }.to raise_error(OptaSD::Error)
+    }.to raise_error(OptaSD::Error, "User not Authorised") # this message should change once we get valid account
   end
+
+
 end

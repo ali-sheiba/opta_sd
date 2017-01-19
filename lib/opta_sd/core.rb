@@ -37,11 +37,9 @@ module OptaSD
     end
 
     def get
-      http = Net::HTTP.get(build_uri)
+      http  = Net::HTTP.get(build_uri)
       @data = JSON.parse(http)
-      if @data['errorCode']
-        raise OptaSD::Error.new(@data)
-      end
+      fail OptaSD::Error.new(@data) if @data['errorCode']
       self
     end
 

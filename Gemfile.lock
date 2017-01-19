@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    opta_sd (0.1.0)
+    opta_sd (0.0.1)
       bundler
       json
       rspec
