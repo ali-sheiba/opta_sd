@@ -1,0 +1,21 @@
+10000: "An unexpected error has occurred"
+10001: "Page not found error"
+10010: "Outlet doesn't exist"
+10100: "Feed Unavailable"
+
+10200: "Missing request parameter"
+10201: "Unknown request parameter"
+10202: "Invalid request parameter value"
+10203: "Ambiguous/Invalid request parameters"
+10204: "Invalid request method"
+10210: "Unsupported format: _fmt parameter"
+10212: "Unsupported mode: _rt parameter"
+10217: "Invalid pagination: _pgNm, _pgSz parameters"
+10219: "_pgSz parameter above maximum"
+
+10300: "Feed Access Denied"
+10313: "User not Authorised"
+10320: "Acceptable usage exceeded"
+
+10400: "No data found"
+10401: "Data request timeout"
