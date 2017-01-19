@@ -1,4 +1,4 @@
-# OptaSdApi
+# OPTA Sports Data Soccer API GEM
 Short description and motivation.
 
 ## Usage
