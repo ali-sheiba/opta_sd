@@ -1,0 +1,19 @@
+core:
+  _rt: "_rt"
+  _format: "_fmt"
+  _locale: "_lcl"
+  _callback: "_clbk"
+  _sord: "_ordSrt"
+  _page_size: "_pgSz"
+  _page_number: "_pgNm"
+
+match:
+  fixture: "fx"
+  tournament: "tmcl" # tournament_calendar
+  stage: "stg"
+  competition: "comp"
+  contestant: "ctst"
+  match_time: "mt.mDt"
+  live: "live"
+  lineups: "lineups"
+  status: "status"

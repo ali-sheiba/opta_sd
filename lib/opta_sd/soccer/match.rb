@@ -2,29 +2,32 @@ module OptaSD
   module Soccer
     class Match < OptaSD::Soccer::SoccerCore
 
-      attr_accessor :params
+      attr_accessor :params, :data
 
       def initialize
         super
         @feed_name = 'match'
       end
 
-      def resource(resource_id)
-        @resource = resource_id
-        self
+
+      PARAMETERS['match'].keys.each do |param_name|
+        if BOOLEAN_PARAMS.include?(param_name)
+          define_method param_name do |value = true|
+            @params[PARAMETERS['match'][param_name]] = value ? 'yes' : 'no'
+            self
+          end
+        else
+          define_method param_name do |value|
+            @params[PARAMETERS['match'][param_name]] = value
+            self
+          end
+        end
       end
 
-      # Params
-
-      def live(value = true)
-        @params['live'] = value ? 'yes' : 'no'
-        self
+      def process_data(data)
+        OptaSD::MatchWrapper.new(data)
       end
 
-      def lineups(value = true)
-        @params['lineups'] = value ? 'yes' : 'no'
-        self
-      end
     end
   end
 end
