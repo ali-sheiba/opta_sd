@@ -2,6 +2,7 @@ module OptaSD
   class Core
 
     PARAMETERS = YAML::load(File.open('./config/parameters.yml'))
+    attr_reader :data
 
     # The Initialize
     def initialize
@@ -14,7 +15,7 @@ module OptaSD
       http = Net::HTTP.get(build_uri)
       data = JSON.parse(http)
       fail OptaSD::Error.new(data) if data['errorCode']
-
+      @data = data
       process_data(data)
       self
     end
@@ -23,15 +24,8 @@ module OptaSD
     def process_data(data)
       fail NotImplementedError
     end
-    #
-    # # The Core Parameters setter
-    # %w(_rt _lcl _fmt _clbk _ordSrt _pgNm _pgSz).each do |param_name|
-    #   define_method param_name do |value|
-    #     @params[param_name.to_sym] = value
-    #     self
-    #   end
-    # end
 
+    # Define Core API Parameters
     PARAMETERS['core'].keys.each do |param_name|
       define_method param_name do |value|
         @params[PARAMETERS['core'][param_name].to_sym] = value
@@ -71,6 +65,27 @@ module OptaSD
       URI.parse([build_url, build_params].join('?'))
     end
 
+    ## ---------------------------------------- ##
+
+    # Define resource for Boolean Parameters
+    def self.boolean_params(model , *args)
+      args.each do |param_name|
+        define_method param_name do |value = true|
+          @params[PARAMETERS[model.to_s][param_name.to_s]] = value ? 'yes' : 'no'
+          self
+        end
+      end
+    end
+
+    # Define Pesource Parameters
+    def self.resource_params(model, *args)
+      args.each do |param_name|
+        define_method param_name do |value|
+          @params[PARAMETERS[model.to_s][param_name.to_s] || param_name.to_s] = value
+          self
+        end
+      end
+    end
 
   end
 end

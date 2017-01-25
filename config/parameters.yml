@@ -3,7 +3,7 @@ core:
   _format: "_fmt"
   _locale: "_lcl"
   _callback: "_clbk"
-  _sord: "_ordSrt"
+  _sort: "_ordSrt"
   _page_size: "_pgSz"
   _page_number: "_pgNm"
 
@@ -14,6 +14,7 @@ match:
   competition: "comp"
   contestant: "ctst"
   match_time: "mt.mDt"
+  match_date: "mt.mDt"
   live: "live"
   lineups: "lineups"
   status: "status"

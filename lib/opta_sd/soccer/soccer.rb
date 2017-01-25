@@ -2,8 +2,6 @@ module OptaSD
   module Soccer
     class SoccerCore < OptaSD::Core
 
-      BOOLEAN_PARAMS = %(live lineups)
-
       def initialize
         super
         @sport = 'soccerdata'
@@ -13,6 +11,7 @@ module OptaSD
         @resource = resource_id
         self
       end
+
     end
   end
 end

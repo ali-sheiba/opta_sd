@@ -4,24 +4,12 @@ module OptaSD
 
       attr_accessor :params, :data
 
+      boolean_params  'match', :live,    :lineups
+      resource_params 'match', :fixture, :tournament, :stage, :competition, :contestant, :match_time, :match_date, :status
+
       def initialize
         super
         @feed_name = 'match'
-      end
-
-
-      PARAMETERS['match'].keys.each do |param_name|
-        if BOOLEAN_PARAMS.include?(param_name)
-          define_method param_name do |value = true|
-            @params[PARAMETERS['match'][param_name]] = value ? 'yes' : 'no'
-            self
-          end
-        else
-          define_method param_name do |value|
-            @params[PARAMETERS['match'][param_name]] = value
-            self
-          end
-        end
       end
 
       def process_data(data)
