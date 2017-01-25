@@ -1,7 +1,9 @@
 # OPTA Sports Data Soccer API GEM
 Short description and motivation.
 
-## Usage
+WIP
+
+<!-- ## Usage
 How to use my plugin.
 
 ## Installation
@@ -25,4 +27,4 @@ $ gem install opta_sd
 Contribution directions go here.
 
 ## License
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT). -->
