@@ -52,3 +52,9 @@ seasonstats:
   tournament: "tmcl"
   contestant: "ctst"
   competition: "comp"
+
+standings:
+  stage: "stg"
+  tournament: "tmcl"
+  live: "live"
+  type: "type"
