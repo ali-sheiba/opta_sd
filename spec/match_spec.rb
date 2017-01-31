@@ -15,7 +15,7 @@ describe OptaSD::Soccer::Match do
     expect(match.data["matchInfo"]).to include("id" => @valid_match_id)
   end
 
-  it "Initiate Match Class" do
+  it "get a match details by resource id" do
     match = OptaSD::Soccer::Match.new.resource(@valid_match_id).live.get
 
     expect(match.data).to include("matchInfo")

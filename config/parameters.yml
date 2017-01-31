@@ -21,3 +21,9 @@ match:
 
 tournamentcalendar:
   competition: "comp"
+
+squads:
+  tournament: "tmcl"
+  contestant: "ctst"
+  detailed: "detailed"
+  people: "people"
