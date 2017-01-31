@@ -44,3 +44,6 @@ passmatrix:
 commentary:
   fixture: "fx"
   type: "type"
+
+matchfacts:
+  fixture: "fx"

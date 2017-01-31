@@ -16,7 +16,7 @@ Match Events                      | MatchEvent
 Pass Matrix and Average Formation | PassMatrix
 Possession                        | Possession
 Commentary                        | Commentary
-Match Facts                       | --
+Match Facts                       | MatchFacts
 Seasonal Stats                    | --
 Squads                            | Squads
 Team Standings                    | --
