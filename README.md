@@ -13,7 +13,7 @@ API                               |  Class
 Fixtures and Results              | Match
 Match Statistics                  | MatchStatistics
 Match Events                      | MatchEvent
-Pass Matrix and Average Formation | --
+Pass Matrix and Average Formation | PassMatrix
 Possession                        | Possession
 Commentary                        | --
 Match Facts                       | --

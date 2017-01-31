@@ -37,3 +37,6 @@ matchevent:
 matchstats:
   fixture: "fx"
   detailed: "detailed"
+
+passmatrix:
+  fixture: "fx"
