@@ -11,6 +11,7 @@ require './lib/opta_sd/soccer/match'
 require './lib/opta_sd/soccer/squads'
 require './lib/opta_sd/soccer/possession'
 require './lib/opta_sd/soccer/match_event'
+require './lib/opta_sd/soccer/match_statistics'
 require './lib/opta_sd/soccer/tournament_calendar'
 
 # Wrapper Classes

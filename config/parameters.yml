@@ -33,3 +33,7 @@ possession:
 
 matchevent:
   fixture: "fx"
+
+matchstats:
+  fixture: "fx"
+  detailed: "detailed"

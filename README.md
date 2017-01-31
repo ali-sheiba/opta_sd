@@ -11,7 +11,7 @@
 API                               |  Class
 --------------------------------- | :-----:
 Fixtures and Results              | Match
-Match Statistics                  | --
+Match Statistics                  | MatchStatistics
 Match Events                      | MatchEvent
 Pass Matrix and Average Formation | --
 Possession                        | Possession
