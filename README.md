@@ -1,7 +1,31 @@
 # OPTA Sports Data Soccer API GEM
-Short description and motivation.
 
-WIP
+<!-- Short description and motivation. -->
+
+# WIP
+
+# Sports Data Soccer API guide
+
+<http://api.performfeeds.com/soccerdata/match/sdapidocumentation?_docu>
+
+API                               |  Class
+--------------------------------- | :-----:
+Fixtures and Results              | Match
+Match Statistics                  | --
+Match Events                      | --
+Pass Matrix and Average Formation | --
+Possession                        | Possession
+Commentary                        | --
+Match Facts                       | --
+Seasonal Stats                    | --
+Squads                            | Squads
+Team Standings                    | --
+Player Career                     | --
+Tournament Calendars              | TournamentCalendar
+Match Preview                     | --
+Rankings                          | --
+Tournament Schedule               | --
+
 
 <!-- ## Usage
 How to use my plugin.
