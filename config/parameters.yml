@@ -30,3 +30,6 @@ squads:
 
 possession:
   fixture: "fx"
+
+matchevent:
+  fixture: "fx"
