@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OptaSD do
+describe OptaSD::Soccer::Match do
 
   before do
     @valid_match_id   = "bsu6pjne1eqz2hs8r3685vbhl"

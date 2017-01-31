@@ -1,6 +1,8 @@
 module OptaSD
   module Soccer
     class SoccerCore < OptaSD::Core
+      
+      attr_accessor :params, :data
 
       def initialize
         super
