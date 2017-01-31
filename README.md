@@ -17,7 +17,7 @@ Pass Matrix and Average Formation | PassMatrix
 Possession                        | Possession
 Commentary                        | Commentary
 Match Facts                       | MatchFacts
-Seasonal Stats                    | --
+Seasonal Stats                    | SeasonalStats
 Squads                            | Squads
 Team Standings                    | --
 Player Career                     | --

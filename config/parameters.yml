@@ -47,3 +47,8 @@ commentary:
 
 matchfacts:
   fixture: "fx"
+
+seasonstats:
+  tournament: "tmcl"
+  contestant: "ctst"
+  competition: "comp"
