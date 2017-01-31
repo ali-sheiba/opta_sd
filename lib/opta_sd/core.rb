@@ -16,14 +16,14 @@ module OptaSD
       data = JSON.parse(http)
       fail OptaSD::Error.new(data) if data['errorCode']
       @data = data
-      process_data(data)
+      # process_data(data)
       self
     end
 
     # Data will be Processed here in Chiled Classes
-    def process_data(data)
-      fail NotImplementedError
-    end
+    # def process_data(data)
+    #   fail NotImplementedError
+    # end
 
     # Define Core API Parameters
     PARAMETERS['core'].keys.each do |param_name|

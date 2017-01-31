@@ -12,8 +12,9 @@ module OptaSD
         @feed_name = 'match'
       end
 
-      def process_data(data)
-        OptaSD::MatchWrapper.new(data)
+      def time_range(from, to)
+        match_time("[#{from.strftime('%Y-%m-%dT%l:%M:%SZ')} TO #{to.strftime('%Y-%m-%dT%l:%M:%SZ')}]")
+        return self
       end
 
     end
