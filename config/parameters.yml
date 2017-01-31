@@ -27,3 +27,6 @@ squads:
   contestant: "ctst"
   detailed: "detailed"
   people: "people"
+
+possession:
+  fixture: "fx"
