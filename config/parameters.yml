@@ -40,3 +40,7 @@ matchstats:
 
 passmatrix:
   fixture: "fx"
+
+commentary:
+  fixture: "fx"
+  type: "type"
