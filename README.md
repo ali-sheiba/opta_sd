@@ -19,8 +19,8 @@ Commentary                        | Commentary
 Match Facts                       | MatchFacts
 Seasonal Stats                    | SeasonalStats
 Squads                            | Squads
-Team Standings                    | --
-Player Career                     | --
+Team Standings                    | TeamStandings
+Player Career                     | PlayerCareer
 Tournament Calendars              | TournamentCalendar
 Match Preview                     | --
 Rankings                          | --

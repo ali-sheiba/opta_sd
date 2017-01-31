@@ -58,3 +58,8 @@ standings:
   tournament: "tmcl"
   live: "live"
   type: "type"
+
+playercareer:
+  person: "prsn"
+  active: "active"
+  contestant: "ctst"
