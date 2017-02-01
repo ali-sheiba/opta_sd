@@ -6,7 +6,7 @@ module OptaSD
 
     # The Initialize
     def initialize
-      get_configuration
+      set_configuration
       @params = Hash.new
     end
 
@@ -35,11 +35,16 @@ module OptaSD
 
     private
 
-    # Load OPTA SD API Configurations from './config/opta_sd_api.yml'
-    def get_configuration
-      config      = YAML::load(File.open(File.expand_path('../../../config/opta_sd.yml', __FILE__)))
+    # Load OPTA SD API Configurations from `config_file`
+    def set_configuration
+      config      = config_file
       @domain     = config['opta_domain']
       @auth_token = config['opta_auth_token']
+    end
+
+    # Load Configurations file 'config/opta_sd_api.yml'
+    def config_file
+      YAML::load(File.open(File.expand_path('../../../config/opta_sd.yml', __FILE__)))
     end
 
     # Build the Base URL of the Request
