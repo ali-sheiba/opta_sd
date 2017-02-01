@@ -24,7 +24,7 @@ Player Career                     | PlayerCareer
 Tournament Calendars              | TournamentCalendar
 Match Preview                     | MatchPreview
 Rankings                          | Rankings
-Tournament Schedule               | --
+Tournament Schedule               | TournamentSchedule
 
 
 <!--

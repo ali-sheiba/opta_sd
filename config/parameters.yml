@@ -69,3 +69,6 @@ matchpreview:
 
 rankings:
   tournament: "tmcl"
+
+tournamentschedule:
+  tournament: "tmcl"
