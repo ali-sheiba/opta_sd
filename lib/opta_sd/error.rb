@@ -24,7 +24,7 @@ module OptaSD
 
   class ErrorMessage
     def self.get_message(error_code)
-      errors = YAML::load(File.open('./errors.yml'))
+      errors = YAML::load(File.open(File.expand_path('../../../errors.yml', __FILE__)))
       errors[error_code.to_i]
     end
   end

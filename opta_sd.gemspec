@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "Opta Sports Data Soccer API."
   s.license     = "MIT"
 
-  # s.files         = Dir["{config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files         = Dir["{config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.files         = `git ls-files -z`.split("\x0")
   s.executables   = s.files.grep(%r{^bin\/}) { |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)\/})

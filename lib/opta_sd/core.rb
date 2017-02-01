@@ -1,7 +1,7 @@
 module OptaSD
   class Core
 
-    PARAMETERS = YAML::load(File.open('./config/parameters.yml'))
+    PARAMETERS = YAML::load(File.open(File.expand_path('../../../config/parameters.yml', __FILE__)))
     attr_reader :data
 
     # The Initialize
@@ -37,7 +37,7 @@ module OptaSD
 
     # Load OPTA SD API Configurations from './config/opta_sd_api.yml'
     def get_configuration
-      config      = YAML::load(File.open('./config/opta_sd.yml'))
+      config      = YAML::load(File.open(File.expand_path('../../../config/opta_sd.yml', __FILE__)))
       @domain     = config['opta_domain']
       @auth_token = config['opta_auth_token']
     end
