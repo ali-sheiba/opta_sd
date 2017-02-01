@@ -66,3 +66,6 @@ playercareer:
 
 matchpreview:
   fixture: "fx"
+
+rankings:
+  tournament: "tmcl"

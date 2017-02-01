@@ -23,7 +23,7 @@ Team Standings                    | TeamStandings
 Player Career                     | PlayerCareer
 Tournament Calendars              | TournamentCalendar
 Match Preview                     | MatchPreview
-Rankings                          | --
+Rankings                          | Rankings
 Tournament Schedule               | --
 
 
