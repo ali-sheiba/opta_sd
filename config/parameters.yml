@@ -63,3 +63,6 @@ playercareer:
   person: "prsn"
   active: "active"
   contestant: "ctst"
+
+matchpreview:
+  fixture: "fx"
