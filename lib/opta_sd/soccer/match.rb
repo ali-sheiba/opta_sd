@@ -11,7 +11,7 @@ module OptaSD
       end
 
       def time_range(from, to)
-        match_time("[#{from.strftime('%Y-%m-%dT%l:%M:%SZ')} TO #{to.strftime('%Y-%m-%dT%l:%M:%SZ')}]")
+        match_time("[#{from.strftime('%Y-%m-%dT%H:%M:%SZ')} TO #{to.strftime('%Y-%m-%dT%H:%M:%SZ')}]")
         return self
       end
 
