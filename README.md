@@ -1,23 +1,25 @@
-# OPTA Sports Data Soccer API GEM
+# OPTA Sports Data Soccer API
 
-Docs WIP
+OPTA SD is a library to Integrate and Utilize Opta Sports Data Apis.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'opta_sd', git: 'git://github.com/sheiba-clickapps/opta_sd.git'
+gem 'opta_sd'
 ```
 
---------------------------------------------------------------------------------
+And then execute:
 
-## Usage
+```bash
+$ bundle install
+```
 
-To Use the Gem in Rails Application:
+Or install it yourself as:
 
-```ruby
-WIP
+```bash
+$ gem install opta_sd
 ```
 
 --------------------------------------------------------------------------------
@@ -52,7 +54,7 @@ Parameters are changed in this gem to be more readable, and will be transulated 
 
 There are two types of parameters, _core_ parameters that can be used in all apis, and _api parameters_ those are specific for each api.
 
-Core Parameters are have ___ prefix, and they are:
+Core Parameters are have `_` prefix, and they are:
 
 Method         | Actual Parameter
 -------------- | ----------------
@@ -67,14 +69,47 @@ Method         | Actual Parameter
 ### Example of using core parameters
 
 ```ruby
-OptaSD::Soccer::Match.new.competition('722fdbecxzcq9788l6jqclzlw').time_range(Time.now - 86400, Time.now + 86400).get
+OptaSD::Soccer::Match.new.competition('722fdbecxzcq9788l6jqclzlw').time_range(Time.now - 86400, Time.now + 86400)
 ```
 
 ### Response Format
 
 OPTA SD provides the response in `json` and `xml` format, you can use `_format` method to define the required response format, `json` is the default.
 
-JSON response will be Parsed by `JSON.parse` and XML will be parsed by `nokogiri` gem. you can override `parse_xml` method from Core class in case you need to change the behaviour.
+JSON response will be Parsed by `JSON.parse` and XML will be parsed by `nokogiri` gem. you can override `parse_xml` method from Core Class in case you need to change the behaviour.
+
+### The Final Call
+
+After building the required parameters, you will call `get` method at the end of the chain to build the request and pull the data. after that you can retrieve the response by calling `data`.
+
+Example:
+
+```ruby
+# Build the request hit the api
+match = OptaSD::Soccer::Match.new.resource('bsu6pjne1eqz2hs8r3685vbhl').live.lineups.get
+
+# retrieve the response data
+match.data['match']
+```
+
+### Use this Gem with Rails
+
+To be able to use this gem with your own key, you need to create a `opta_sd.yml` in config dir and override `config_file` method from Core Class to read the `opta_sd.yml` from your app directory.
+
+```yaml
+# config/opta_sd.yml
+opta_domain:     'http://api.performfeeds.com'
+opta_auth_token: 'YOUR-OWN-KEY'
+```
+
+```ruby
+# config/initializers/opta_sd.rb
+class OptaSD::Core
+  def config_file
+    YAML::load(File.open(Rails.root.join('config/opta_sd.yml')))
+  end
+end
+```
 
 --------------------------------------------------------------------------------
 
@@ -347,6 +382,16 @@ Available Parameters:
 
 - `resource(tournament_id)`
 - `tournament(tournament_id)`
+
+--------------------------------------------------------------------------------
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
 --------------------------------------------------------------------------------
 
