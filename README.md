@@ -20,6 +20,12 @@ To Use the Gem in Rails Application:
 WIP
 ```
 
+--------------------------------------------------------------------------------
+
+## Using Guide
+
+This Gem is just a class builder for the APIs, every api have a Class for it, and for every api's parameters there are methods to build them, and those parameter methods are explained down below for each Class.
+
 ### Available Classes :
 
 Available Feeds                   |                       Class                       | API End Point
@@ -40,11 +46,37 @@ Match Preview                     |         [MatchPreview](#13-match-preview)   
 Rankings                          |             [Rankings](#14-rankings)              | `/soccerdata/rankings/...`
 Tournament Schedule               |   [TournamentSchedule](#15-tournament-schedule)   | `/soccerdata/tournamentschedule/...`
 
+### Parameter Methods :
+
+Parameters are changed in this gem to be more readable, and will be transulated to Opta keys in the backend.
+
+There are two types of parameters, _core_ parameters that can be used in all apis, and _api parameters_ those are specific for each api.
+
+Core Parameters are have ___ prefix, and they are:
+
+Method         | Actual Parameter
+-------------- | ----------------
+`_rt`          | `_rt`
+`_format`      | `_fmt`
+`_locale`      | `_lcl`
+`_callback`    | `_clbk`
+`_sort`        | `_ordSrt`
+`_page_size`   | `_pgSz`
+`_page_number` | `_pgNm`
+
+### Example of using core parameters
+
+```ruby
+OptaSD::Soccer::Match.new.competition('722fdbecxzcq9788l6jqclzlw').time_range(Time.now - 86400, Time.now + 86400).get
+```
+
+### Response Format
+
+OPTA SD provides the response in `json` and `xml` format, you can use `_format` method to define the required response format, `json` is the default.
+
+JSON response will be Parsed by `JSON.parse` and XML will be parsed by `nokogiri` gem. you can override `parse_xml` method from Core class in case you need to change the behaviour.
+
 --------------------------------------------------------------------------------
-
-## How It Work!
-
-- xxx Core parameters
 
 ## APIS
 
@@ -65,6 +97,7 @@ OptaSD::Soccer::Match.new.fixture('urn:perform:optacore:fixture:2366080').live.l
 
 # Get competition matches between two time stamps
 OptaSD::Soccer::Match.new.competition('722fdbecxzcq9788l6jqclzlw').time_range(Time.now - 86400, Time.now + 86400).get
+`
 ```
 
 Available Parameters:
@@ -252,8 +285,8 @@ OptaSD::Soccer::PlayerCareer.new.contestant('apoawtpvac4zqlancmvw4nk4o').active(
 Available Parameters:
 
 - `resource(person_id)`
-- `person(person)`
-- `contestant(contestant)`
+- `person(person_id)`
+- `contestant(contestant_id)`
 - `active(ture/false)`
 
 ### 12\. Tournament Calendars
@@ -274,7 +307,7 @@ OptaSD::Soccer::TournamentCalendar.new.active.authorized.get
 
 Available Parameters:
 
-- `competition`
+- `competition(competition_id)`
 - `active`
 - `authorized`
 
