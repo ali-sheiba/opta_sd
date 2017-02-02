@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = OptaSD::VERSION
   s.authors     = ["Ali Al-Sheiba"]
   s.email       = ["m.sheiba@clickapps.co"]
-  # s.homepage    = "TODO"
+  s.homepage    = "https://github.com/ali-sheiba/opta_sd"
   s.summary     = "Opta Sports Data Soccer API."
-  s.description = "Opta Sports Data Soccer API."
+  s.description = "OPTA SD is a library to Integrate and Utilize Opta Sports Data Apis."
   s.license     = "MIT"
 
   s.files         = Dir["{config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
