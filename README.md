@@ -97,7 +97,6 @@ OptaSD::Soccer::Match.new.fixture('urn:perform:optacore:fixture:2366080').live.l
 
 # Get competition matches between two time stamps
 OptaSD::Soccer::Match.new.competition('722fdbecxzcq9788l6jqclzlw').time_range(Time.now - 86400, Time.now + 86400).get
-`
 ```
 
 Available Parameters:
