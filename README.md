@@ -79,6 +79,7 @@ Available Parameters:
 ### 3\. Match Events
 
 ```ruby
+# Get Match Events
 OptaSD::Soccer::MatchEvent.new.fixture('bsu6pjne1eqz2hs8r3685vbhl').get
 ```
 
@@ -90,6 +91,7 @@ Available Parameters:
 ### 4\. Pass Matrix and Average Formation
 
 ```ruby
+# Get Match Matrix
 OptaSD::Soccer::PassMatrix.new.fixture('bsu6pjne1eqz2hs8r3685vbhl').get
 ```
 
@@ -101,6 +103,7 @@ Available Parameters:
 ### 5\. Possession
 
 ```ruby
+# Get Possession Throughout A Match
 OptaSD::Soccer::Possession.new.fixture('bsu6pjne1eqz2hs8r3685vbhl').get
 ```
 
@@ -147,6 +150,7 @@ Available Parameters:
 ```ruby
 # Get Seasonal Stats by Competition Contestants
 OptaSD::Soccer::SeasonalStats.new.competition('722fdbecxzcq9788l6jqclzlw').contestant('884uzyf1wosc7ykji6e18gifp').get
+
 # Get Seasonal Stats by Tournament Contestants
 OptaSD::Soccer::SeasonalStats.new.tournament('408bfjw6uz5k19zk4am50ykmh').contestant('884uzyf1wosc7ykji6e18gifp').get
 ```
@@ -162,10 +166,13 @@ Available Parameters:
 ```ruby
 # Get Squads By Tournament
 OptaSD::Soccer::Squads.new.tournament('408bfjw6uz5k19zk4am50ykmh').get
+
 # Get Squads By Contestant
 OptaSD::Soccer::Squads.new.contestant('884uzyf1wosc7ykji6e18gifp').get
+
 # Get Detailed Squads
 OptaSD::Soccer::Squads.new.tournament('408bfjw6uz5k19zk4am50ykmh').detailed.get
+
 # Get People Squads
 OptaSD::Soccer::Squads.new.tournament('408bfjw6uz5k19zk4am50ykmh').people.get
 ```
@@ -180,38 +187,114 @@ Available Parameters:
 ### 10\. Team Standings
 
 ```ruby
-OptaSD::Soccer::TeamStandings.new
+# Get Team Standings By Tournament
+OptaSD::Soccer::TeamStandings.new.tournament('408bfjw6uz5k19zk4am50ykmh').get
+
+# Get Team Standings By Tournament And Stage
+OptaSD::Soccer::TeamStandings.new.tournament('408bfjw6uz5k19zk4am50ykmh').stage('123').get
+
+# Get Team Standings With Live Data
+OptaSD::Soccer::TeamStandings.new.tournament('408bfjw6uz5k19zk4am50ykmh').live.get
+
+# Get Team Standings By Type
+OptaSD::Soccer::TeamStandings.new.tournament('408bfjw6uz5k19zk4am50ykmh').type('total').get
+OptaSD::Soccer::TeamStandings.new.tournament('408bfjw6uz5k19zk4am50ykmh').total.get
 ```
+
+Available Parameters:
+
+- `stage(stage_id)`
+- `tournament(tournament_id)`
+- `type(type)` types are : `total` - `home` - `away` - `form-total` - `form-home` - `form-away`
+- `live(ture/false)`
+- `total`
+- `home`
+- `away`
+- `form_total`
+- `form_home`
+- `form_away`
 
 ### 11\. Player Career
 
 ```ruby
-OptaSD::Soccer::PlayerCareer.new
+# Get Player Career By Person ID
+OptaSD::Soccer::PlayerCareer.new.resource('1c4gmhsc0mfjl2or3oxggg6hh').get
+OptaSD::Soccer::PlayerCareer.new.person('1c4gmhsc0mfjl2or3oxggg6hh').get
+
+# Get Players Career By Contestant ID
+OptaSD::Soccer::PlayerCareer.new.contestant('apoawtpvac4zqlancmvw4nk4o').get
+
+# Get Players Career By Contestant ID and Active on In-Active
+OptaSD::Soccer::PlayerCareer.new.contestant('apoawtpvac4zqlancmvw4nk4o').active.get
+OptaSD::Soccer::PlayerCareer.new.contestant('apoawtpvac4zqlancmvw4nk4o').active(false).get
 ```
+
+Available Parameters:
+
+- `resource(person_id)`
+- `person(person)`
+- `contestant(contestant)`
+- `active(ture/false)`
 
 ### 12\. Tournament Calendars
 
 ```ruby
-OptaSD::Soccer::TournamentCalendar.new
+# Get All Competitions With All Tournaments
+OptaSD::Soccer::TournamentCalendar.new.get
+
+# Get Tournaments Of Competitions
+OptaSD::Soccer::TournamentCalendar.new.competition('722fdbecxzcq9788l6jqclzlw').get
+
+# Get All Competitions With Only Active Tournaments
+OptaSD::Soccer::TournamentCalendar.new.active.get
+
+# Get Only Authorized Competitions With Only Active Tournaments
+OptaSD::Soccer::TournamentCalendar.new.active.authorized.get
 ```
+
+Available Parameters:
+
+- `competition`
+- `active`
+- `authorized`
 
 ### 13\. Match Preview
 
 ```ruby
-OptaSD::Soccer::MatchPreview.new
+# Get Preview of Match
+OptaSD::Soccer::MatchPreview.new.fixture('bsu6pjne1eqz2hs8r3685vbhl').get
 ```
+
+Available Parameters:
+
+- `resource(match_id)`
+- `fixture(match_id)`
 
 ### 14\. Rankings
 
 ```ruby
-OptaSD::Soccer::Rankings.new
+# Get Tournament Rankings
+OptaSD::Soccer::Rankings.new.resource('408bfjw6uz5k19zk4am50ykmh').get
+OptaSD::Soccer::Rankings.new.tournament('408bfjw6uz5k19zk4am50ykmh').get
 ```
+
+Available Parameters:
+
+- `resource(tournament_id)`
+- `tournament(tournament_id)`
 
 ### 15\. Tournament Schedule
 
 ```ruby
-OptaSD::Soccer::TournamentSchedule.new
+# Get Tournament Schedule
+OptaSD::Soccer::TournamentSchedule.new.resource('408bfjw6uz5k19zk4am50ykmh').get
+OptaSD::Soccer::TournamentSchedule.new.tournament('408bfjw6uz5k19zk4am50ykmh').get
 ```
+
+Available Parameters:
+
+- `resource(tournament_id)`
+- `tournament(tournament_id)`
 
 --------------------------------------------------------------------------------
 
