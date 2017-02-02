@@ -20,6 +20,26 @@ To Use the Gem in Rails Application:
 WIP
 ```
 
+### Available Classes :
+
+Available Feeds                   |                       Class                       | API End Point
+--------------------------------- | :-----------------------------------------------: | ------------------------------------
+Fixtures and Results              |         [Match](#1-fixtures-and-results)          | `/soccerdata/match/...`
+Match Statistics                  |      [MatchStatistics](#2-match-statistics)       | `/soccerdata/matchstats/...`
+Match Events                      |           [MatchEvent](#3-match-events)           | `/soccerdata/matchevent/...`
+Pass Matrix and Average Formation | [PassMatrix](4-pass-matrix-and-average-formation) | `/soccerdata/passmatrix/...`
+Possession                        |            [Possession](#5-possession)            | `/soccerdata/possession/...`
+Commentary                        |            [Commentary](#6-commentary)            | `/soccerdata/Commentary/...`
+Match Facts                       |           [MatchFacts](#7-match-facts)            | `/soccerdata/matchfacts/...`
+Seasonal Stats                    |        [SeasonalStats](#8-seasonal-stats)         | `/soccerdata/seasonstats/...`
+Squads                            |                [Squads](#9-squads)                | `/soccerdata/squads/...`
+Team Standings                    |        [TeamStandings](#10-team-standings)        | `/soccerdata/standings/...`
+Player Career                     |         [PlayerCareer](#11-player-career)         | `/soccerdata/playercareer/...`
+Tournament Calendars              |  [TournamentCalendar](#12-tournament-calendars)   | `/soccerdata/tournamentcalendar/...`
+Match Preview                     |         [MatchPreview](#13-match-preview)         | `/soccerdata/matchpreview/...`
+Rankings                          |             [Rankings](#14-rankings)              | `/soccerdata/rankings/...`
+Tournament Schedule               |   [TournamentSchedule](#15-tournament-schedule)   | `/soccerdata/tournamentschedule/...`
+
 --------------------------------------------------------------------------------
 
 ## How It Work!
@@ -57,7 +77,7 @@ Available Parameters:
 - `contestant(contestant_id)`
 - `live(ture/false)` by default will pass true
 - `lineups(ture/false)` by default will pass true
-- `status(status)` statuses : (all, fixture, played, playing, cancelled, postponed, suspended)
+- `status(status)` statuses : (`all` - `fixture` - `played` - `playing` - `cancelled` - `postponed` - `suspended`)
 - `time_range(from, to)` from and to should be a valid Time, like `Time.now`
 
 ### 2\. Match Statistics
