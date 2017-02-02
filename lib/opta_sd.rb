@@ -1,6 +1,7 @@
 # Project Requirements
 require 'yaml'
 require 'json'
+require 'nokogiri'
 require 'net/http'
 
 # Core Classes
@@ -26,3 +27,16 @@ require 'opta_sd/soccer/tournament_schedule'
 
 # Wrapper Classes
 # Soon
+
+# Add present? to Object
+class Object
+  def present?
+    !blank?
+  end
+end
+
+class NilClass
+  def blank?
+    nil?
+  end
+end

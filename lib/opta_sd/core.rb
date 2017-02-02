@@ -2,6 +2,7 @@ module OptaSD
   class Core
 
     PARAMETERS = YAML::load(File.open(File.expand_path('../../../config/parameters.yml', __FILE__)))
+
     attr_reader :data
 
     # The Initialize
@@ -12,18 +13,32 @@ module OptaSD
 
     # Build the Request and get the Data
     def get
-      http = Net::HTTP.get(build_uri)
-      data = JSON.parse(http)
-      fail OptaSD::Error.new(data) if data['errorCode']
-      @data = data
-      # process_data(data)
+      response = Net::HTTP.get(build_uri)
+      @data = parse_data(response)
       self
     end
 
-    # Data will be Processed here in Chiled Classes
-    # def process_data(data)
-    #   fail NotImplementedError
-    # end
+    # Parse The Response
+    def parse_data(response)
+      case @params[:_fmt]
+      when 'json' then parse_json(response)
+      when 'xml'  then parse_xml(response)
+      else response end
+    end
+
+    # Parse JSON Response
+    def parse_json(response)
+      data = JSON.parse(response)
+      fail OptaSD::Error.new(data), ErrorMessage.get_message(data['errorCode'].to_i) if data['errorCode']
+      data
+    end
+
+    # Parse XML Response
+    def parse_xml(response)
+      data = Nokogiri::XML(response) do |config| config.strict.noblanks end
+      fail OptaSD::Error.new(xml_error_to_hast(data)), ErrorMessage.get_message(data.children.first.content.to_i) if data.css('errorCode').first.present?
+      data
+    end
 
     # Define Core API Parameters
     PARAMETERS['core'].keys.each do |param_name|
@@ -60,14 +75,22 @@ module OptaSD
 
     # Convert Params from Hash To URI Query
     def build_params
-      self._format('json')._rt('b')
+      self._format('json') unless @params[:_fmt]
+      self._rt('b')        unless @params[:_rt]
       URI.encode_www_form(@params)
     end
 
     # Generate valid URI for the request
     def build_uri
-      # puts "#{build_url}?#{build_params}"
+      puts [build_url, build_params].join('?')
       URI.parse([build_url, build_params].join('?'))
+    end
+
+    def xml_error_to_hast(data)
+      {
+        "errorCode" => data.children.first.content.to_i,
+        "token"     => data.children.first['token']
+      }
     end
 
     ## ---------------------------------------- ##

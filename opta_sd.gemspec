@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency "rspec"
+  s.add_dependency "nokogiri", '~> 1.7', '>= 1.7.0.1'
   s.add_dependency "json"
   s.add_dependency "bundler"
 end
