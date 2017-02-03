@@ -1,11 +1,11 @@
 PATH
   remote: .
   specs:
-    opta_sd (0.0.3)
+    opta_sd (1.0.0)
       bundler
       json
       nokogiri (~> 1.7, >= 1.7.0.1)
-      rspec
+      rspec (~> 3.5)
 
 GEM
   remote: https://rubygems.org/
