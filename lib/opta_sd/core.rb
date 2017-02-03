@@ -82,7 +82,7 @@ module OptaSD
 
     # Generate valid URI for the request
     def build_uri
-      puts [build_url, build_params].join('?')
+      # puts [build_url, build_params].join('?')
       URI.parse([build_url, build_params].join('?'))
     end
 
