@@ -1,4 +1,4 @@
-# OPTA Sports Data Soccer API
+# OPTA Sports Data Soccer API (OPTA SDAPI)
 
 [![Ruby Gem](https://img.shields.io/gem/v/opta_sd.svg)](https://rubygems.org/gems/opta_sd)
 [![Build Status](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)](https://travis-ci.org/ali-sheiba/opta_sd?branch=master)

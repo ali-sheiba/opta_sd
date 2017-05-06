@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    opta_sd (1.0.1)
+    opta_sd (1.1.0)
       json
       nokogiri (~> 1.7, >= 1.7.0.1)
 
