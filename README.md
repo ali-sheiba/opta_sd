@@ -1,7 +1,7 @@
 # OPTA Sports Data Soccer API
 
-[![Ruby Gem](https://img.shields.io/gem/v/opta_sd)](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)
-[![Build Status](https://travis-ci.org/ali-sheiba/opta_sd?branch=master)](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)
+[![Ruby Gem](https://img.shields.io/gem/v/opta_sd.svg)](https://rubygems.org/gems/opta_sd)
+[![Build Status](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)](https://travis-ci.org/ali-sheiba/opta_sd?branch=master)
 
 
 Ruby API Client for OPTA SDAPI (Sports Data Soccer API)
