@@ -16,7 +16,8 @@ gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
 
 group :development, :test do
   # To use a debugger
-  gem 'byebug'
-  gem 'pry'
+  gem 'rake', '~> 12.0'
+  gem 'byebug', '~> 9.0', '>= 9.0.6'
+  gem 'pry', '~> 0.10.4'
   gem 'rspec'
 end

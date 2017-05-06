@@ -1,5 +1,8 @@
 # OPTA Sports Data Soccer API
 
+[![Build Status](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)
+
+
 OPTA SD is a library to Integrate and Utilize Opta Sports Data Apis.
 
 ## Installation
@@ -47,6 +50,7 @@ Tournament Calendars              |  [TournamentCalendar](#12-tournament-calenda
 Match Preview                     |         [MatchPreview](#13-match-preview)         | `/soccerdata/matchpreview/...`
 Rankings                          |             [Rankings](#14-rankings)              | `/soccerdata/rankings/...`
 Tournament Schedule               |   [TournamentSchedule](#15-tournament-schedule)   | `/soccerdata/tournamentschedule/...`
+Venues                            |               [Venues](#16-venues)                | `/soccerdata/venues/...`
 
 ### Parameter Methods :
 
@@ -383,6 +387,22 @@ Available Parameters:
 - `resource(tournament_id)`
 - `tournament(tournament_id)`
 
+
+### 16\. Venues
+
+```ruby
+# Get Venues
+OptaSD::Soccer::Venues.new.venue('bdkmbkf8yi951wrjraknp9wad').get
+OptaSD::Soccer::Venues.new.tournament('9xjsbe05up1jqycf7no90as4p').get
+OptaSD::Soccer::Venues.new.contestant('c8h9bw1l82s06h77xxrelzhur').get
+```
+
+Available Parameters:
+
+- `venue(venue_id)`
+- `tournament(tournament_id)`
+- `contestant(contestant_id)`
+-
 --------------------------------------------------------------------------------
 
 ## Contributing
