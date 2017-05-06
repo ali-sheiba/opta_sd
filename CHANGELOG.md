@@ -7,6 +7,7 @@
 
 ### Changed
 - Refactor all parameters methods in Core class and `config/parameters.yml`
+- Update Matches `time_range` format
 
 ## 1.0 ( First Release ) - 3 Feb 2017
 
