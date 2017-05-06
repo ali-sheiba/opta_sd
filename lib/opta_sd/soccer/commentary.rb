@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class Commentary < OptaSD::Soccer::SoccerCore
 
-      resource_params 'commentary', :fixture, :type
+      resource_params :fixture, :type
 
       def initialize
         super

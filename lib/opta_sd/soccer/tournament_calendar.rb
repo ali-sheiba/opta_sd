@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class TournamentCalendar < OptaSD::Soccer::SoccerCore
 
-      resource_params 'tournamentcalendar', :competition
+      resource_params :competition
 
       def initialize
         super

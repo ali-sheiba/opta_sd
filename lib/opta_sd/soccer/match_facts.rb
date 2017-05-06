@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class MatchFacts < OptaSD::Soccer::SoccerCore
 
-      resource_params 'matchfacts', :fixture
+      resource_params :fixture
 
       def initialize
         super

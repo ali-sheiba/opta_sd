@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class SeasonalStats < OptaSD::Soccer::SoccerCore
 
-      resource_params  'seasonstats', :tournament, :contestant, :competition
+      resource_params :tournament, :contestant, :competition
 
       def initialize
         super

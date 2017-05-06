@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class Venues < OptaSD::Soccer::SoccerCore
 
-      resource_params 'venues', :tournament, :contestant, :venue
+      resource_params :tournament, :contestant, :venue
 
       def initialize
         super

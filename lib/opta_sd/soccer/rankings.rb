@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class Rankings < OptaSD::Soccer::SoccerCore
 
-      resource_params 'rankings', :tournament
+      resource_params :tournament
 
       def initialize
         super

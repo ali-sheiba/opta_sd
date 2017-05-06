@@ -1,9 +1,10 @@
 # OPTA Sports Data Soccer API
 
-[![Build Status](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)
+[![Ruby Gem](https://img.shields.io/gem/v/opta_sd)](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)
+[![Build Status](https://travis-ci.org/ali-sheiba/opta_sd?branch=master)](https://travis-ci.org/ali-sheiba/opta_sd.svg?branch=master)
 
 
-OPTA SD is a library to Integrate and Utilize Opta Sports Data Apis.
+Ruby API Client for OPTA SDAPI (Sports Data Soccer API)
 
 ## Installation
 
@@ -402,7 +403,7 @@ Available Parameters:
 - `venue(venue_id)`
 - `tournament(tournament_id)`
 - `contestant(contestant_id)`
--
+
 --------------------------------------------------------------------------------
 
 ## Contributing

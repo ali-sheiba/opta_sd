@@ -2,8 +2,8 @@ module OptaSD
   module Soccer
     class MatchStatistics < OptaSD::Soccer::SoccerCore
 
-      boolean_params  'matchstats', :detailed
-      resource_params 'matchstats', :fixture
+      boolean_params  :detailed
+      resource_params :fixture
 
       def initialize
         super

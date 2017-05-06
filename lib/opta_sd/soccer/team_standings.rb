@@ -2,8 +2,8 @@ module OptaSD
   module Soccer
     class TeamStandings < OptaSD::Soccer::SoccerCore
 
-      boolean_params  'standings', :live
-      resource_params 'standings', :stage, :tournament, :type
+      boolean_params  :live
+      resource_params :stage, :tournament, :type
 
       def initialize
         super

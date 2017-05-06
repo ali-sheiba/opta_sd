@@ -1,79 +1,25 @@
 core:
-  _rt: "_rt"
-  _format: "_fmt"
-  _locale: "_lcl"
-  _callback: "_clbk"
-  _sort: "_ordSrt"
-  _page_size: "_pgSz"
+  _callback:    "_clbk"
+  _format:      "_fmt"
+  _locale:      "_lcl"
   _page_number: "_pgNm"
+  _page_size:   "_pgSz"
+  _rt:          "_rt"
+  _sort:        "_ordSrt"
 
-match:
-  fixture: "fx"
-  tournament: "tmcl" # tournament_calendar
-  stage: "stg"
-  competition: "comp"
-  contestant: "ctst"
-  match_time: "mt.mDt"
-  match_date: "mt.mDt"
-  live: "live"
-  lineups: "lineups"
-  status: "status"
-
-tournamentcalendar:
-  competition: "comp"
-
-squads:
-  tournament: "tmcl"
-  contestant: "ctst"
-  detailed: "detailed"
-  people: "people"
-
-possession:
-  fixture: "fx"
-
-matchevent:
-  fixture: "fx"
-
-matchstats:
-  fixture: "fx"
-  detailed: "detailed"
-
-passmatrix:
-  fixture: "fx"
-
-commentary:
-  fixture: "fx"
-  type: "type"
-
-matchfacts:
-  fixture: "fx"
-
-seasonstats:
-  tournament: "tmcl"
-  contestant: "ctst"
-  competition: "comp"
-
-standings:
-  stage: "stg"
-  tournament: "tmcl"
-  live: "live"
-  type: "type"
-
-playercareer:
-  person: "prsn"
-  active: "active"
-  contestant: "ctst"
-
-matchpreview:
-  fixture: "fx"
-
-rankings:
-  tournament: "tmcl"
-
-tournamentschedule:
-  tournament: "tmcl"
-
-venues:
-  tournament: "tmcl"
-  contestant: "ctst"
-  venue: "venue"
+active:      "active"
+competition: "comp"
+contestant:  "ctst"
+detailed:    "detailed"
+fixture:     "fx"
+lineups:     "lineups"
+live:        "live"
+match_date:  "mt.mDt"
+match_time:  "mt.mDt"
+people:      "people"
+person:      "prsn"
+stage:       "stg"
+status:      "status"
+tournament:  "tmcl"
+type:        "type"
+venue:       "venue"

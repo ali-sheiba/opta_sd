@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class Possession < OptaSD::Soccer::SoccerCore
 
-      resource_params 'possession', :fixture
+      resource_params :fixture
 
       def initialize
         super

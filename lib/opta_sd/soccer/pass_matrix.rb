@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class PassMatrix < OptaSD::Soccer::SoccerCore
 
-      resource_params 'passmatrix', :fixture
+      resource_params :fixture
 
       def initialize
         super

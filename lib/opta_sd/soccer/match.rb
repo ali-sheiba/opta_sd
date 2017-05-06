@@ -2,8 +2,8 @@ module OptaSD
   module Soccer
     class Match < OptaSD::Soccer::SoccerCore
 
-      boolean_params  'match', :live,    :lineups
-      resource_params 'match', :fixture, :tournament, :stage, :competition, :contestant, :match_time, :match_date, :status
+      boolean_params  :live,    :lineups
+      resource_params :fixture, :tournament, :stage, :competition, :contestant, :match_time, :match_date, :status
 
       def initialize
         super

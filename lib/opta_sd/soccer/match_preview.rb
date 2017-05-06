@@ -2,7 +2,7 @@ module OptaSD
   module Soccer
     class MatchPreview < OptaSD::Soccer::SoccerCore
 
-      resource_params 'matchpreview', :fixture
+      resource_params :fixture
 
       def initialize
         super

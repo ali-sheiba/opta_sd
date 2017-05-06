@@ -2,8 +2,8 @@ module OptaSD
   module Soccer
     class Squads < OptaSD::Soccer::SoccerCore
 
-      boolean_params  'squads', :people, :detailed
-      resource_params 'squads', :tournament, :contestant
+      boolean_params  :people, :detailed
+      resource_params :tournament, :contestant
 
       def initialize
         super

@@ -96,24 +96,23 @@ module OptaSD
     ## ---------------------------------------- ##
 
     # Define resource for Boolean Parameters
-    def self.boolean_params(model , *args)
+    def self.boolean_params(*args)
       args.each do |param_name|
         define_method param_name do |value = true|
-          @params[PARAMETERS[model.to_s][param_name.to_s]] = value ? 'yes' : 'no'
+          @params[PARAMETERS[param_name.to_s]] = value ? 'yes' : 'no'
           self
         end
       end
     end
 
     # Define Pesource Parameters
-    def self.resource_params(model, *args)
+    def self.resource_params(*args)
       args.each do |param_name|
         define_method param_name do |value|
-          @params[PARAMETERS[model.to_s][param_name.to_s] || param_name.to_s] = value
+          @params[PARAMETERS[param_name.to_s] || param_name.to_s] = value
           self
         end
       end
     end
-
   end
 end
