@@ -10,7 +10,7 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-gem 'activesupport'
+# gem 'activesupport'
 
 gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
 

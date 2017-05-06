@@ -72,3 +72,8 @@ rankings:
 
 tournamentschedule:
   tournament: "tmcl"
+
+venues:
+  tournament: "tmcl"
+  contestant: "ctst"
+  venue: "venue"

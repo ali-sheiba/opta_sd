@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_development_dependency "bundler"
+  s.add_development_dependency "byebug"
+  s.add_development_dependency "pry"
   s.add_development_dependency "rspec",    '~> 3.5'
   s.add_dependency "nokogiri", '~> 1.7', '>= 1.7.0.1'
   s.add_dependency "json"

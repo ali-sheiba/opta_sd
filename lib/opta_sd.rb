@@ -23,6 +23,7 @@ require 'opta_sd/soccer/team_standings'
 require 'opta_sd/soccer/match_statistics'
 require 'opta_sd/soccer/tournament_calendar'
 require 'opta_sd/soccer/tournament_schedule'
+require 'opta_sd/soccer/venues'
 
 
 # Wrapper Classes
