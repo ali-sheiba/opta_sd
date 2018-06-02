@@ -6,6 +6,8 @@
 
 Ruby API Client for OPTA SDAPI (Sports Data Soccer API)
 
+### _**WARNING: This project is not maintained anymore.**_
+
 ## Installation
 
 Add this line to your application's Gemfile:
