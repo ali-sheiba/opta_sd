@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.1.1 - 2 May 2018
+## 1.1.1 - 2 June 2018
 
 ### Changed
 - Update dependencies due to potential security vulnerability in nokogiri gem
