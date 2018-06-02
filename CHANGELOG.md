@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.1.1
+
+### Changed
+- Update gems versions
+
 ## 1.1 - ( Master ) - 6 May 2017
 
 ### Add

@@ -12,7 +12,7 @@ gemspec
 
 # gem 'activesupport'
 
-gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
+gem 'nokogiri', '~> 1.8.2'
 
 group :development, :test do
   # To use a debugger
